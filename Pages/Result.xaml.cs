@@ -44,6 +44,7 @@ namespace WpfApplication1
                 if (d.Count() == 0) continue;
                 for (var i = d.First(); i <= d.Last(); i += new TimeSpan(1, 0, 0, 0, 0))
                 {
+                    if(!results.Any(x => x.Key == i)) continue;
                     results[i]++;
                 }
             }

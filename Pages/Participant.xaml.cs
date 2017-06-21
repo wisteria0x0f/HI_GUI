@@ -59,5 +59,15 @@ namespace WpfApplication1
             Common.inputData.Add(col);
         }
 
+        protected override void OnPreviewMouseUp(MouseButtonEventArgs e)
+        {
+            base.OnPreviewMouseUp(e);
+
+            if((Mouse.Captured is Calendar) || (Mouse.Captured is System.Windows.Controls.Primitives.CalendarItem))
+            {
+                Mouse.Capture(null);
+            }
+        }
+
     }
 }

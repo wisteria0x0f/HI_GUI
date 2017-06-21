@@ -37,5 +37,14 @@ namespace WpfApplication1
             calendar.DisplayDateStart = DateTime.Now;
             Common.window.Title = "Step1. 候補日を入力してください。";
         }
+
+        protected override void OnPreviewMouseUp(MouseButtonEventArgs e)
+        {
+            base.OnPreviewMouseUp(e);
+            if ( (Mouse.Captured is Calendar) || (Mouse.Captured is System.Windows.Controls.Primitives.CalendarItem))
+            {
+                Mouse.Capture(null);
+            }
+        }
     }
 }
