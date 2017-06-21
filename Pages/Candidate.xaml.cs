@@ -27,7 +27,15 @@ namespace WpfApplication1
 
         private void buttonNext_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService. Navigate(new Participant());
+            Common.candidates = this.calendar.SelectedDates;
+            Common.inputData = new List<DateTime[]>();
+            this.NavigationService.Navigate(new Participant());
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            calendar.DisplayDateStart = DateTime.Now;
+            Common.window.Title = "Step1. 候補日を入力してください。";
         }
     }
 }

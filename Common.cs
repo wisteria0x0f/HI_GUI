@@ -15,22 +15,15 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
-    /// </summary>
-    public partial class MainWindow : NavigationWindow
+    static class Common
     {
-        public MainWindow()
-        {
-            Common.window = this;
-            //this.ShowsNavigationUI = false;
-            Navigate(new Candidate());
-        }
+        public static Window window;
+        public static SelectedDatesCollection candidates;
+        public static List<DateTime[]> inputData;
 
-        public void NextButtonClicked(object sender, EventArgs e)
+        public static void WindowsClose()
         {
-            Navigate(new Candidate());
+            window.Close();
         }
-
     }
 }

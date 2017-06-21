@@ -5,10 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApplication1"
       mc:Ignorable="d"
-      Title="Candidate" Width="500" Height="300">
+      Title="Candidate" Width="500" Height="300"
+      Loaded="Page_Loaded">
 
     <Grid Margin="0,0,0,0" Height="300">
-        <Calendar Margin="100,76,212,77" SelectionMode="MultipleRange" FontFamily="KFhimaji" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5">
+        <Calendar x:Name="calendar" Margin="100,76,212,77" SelectionMode="MultipleRange" FontFamily="KFhimaji" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5">
             <Calendar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>

@@ -24,5 +24,40 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        private void buttonFinish_Click(object sender, RoutedEventArgs e)
+        {
+            AddInputDates(calendar.SelectedDates.ToArray());
+            this.NavigationService.Navigate(new Result());
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var candidatesList = Common.candidates.ToList();
+            candidatesList.Sort();
+            calendar.DisplayDateStart = candidatesList.First();
+            calendar.DisplayDateEnd = candidatesList.Last();
+            for (var i = Common.candidates.First(); i <= Common.candidates.Last(); i += new TimeSpan(1, 0, 0, 0, 0))
+            {
+                if (candidatesList.Contains(i)) continue;
+                calendar.BlackoutDates.Add(new CalendarDateRange(i));
+            }
+
+            Common.window.Title = "Step2. 参加できる日を入力してください。";
+
+        }
+
+        private void buttonNext_Click(object sender, RoutedEventArgs e)
+        {
+            AddInputDates(calendar.SelectedDates.ToArray());
+            this.NavigationService.Navigate(new Participant());
+        }
+
+
+        private void AddInputDates(DateTime[] col)
+        {
+            Common.inputData.Add(col);
+        }
+
     }
 }
