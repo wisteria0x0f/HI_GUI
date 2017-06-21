@@ -35,9 +35,16 @@ namespace WpfApplication1
         {
             var candidatesList = Common.candidates.ToList();
             candidatesList.Sort();
+            if(candidatesList.Count == 0)
+            {
+                this.NavigationService.Navigate(new Result());
+                return;
+            }
             calendar.DisplayDateStart = candidatesList.First();
             calendar.DisplayDateEnd = candidatesList.Last();
-            for (var i = Common.candidates.First(); i <= Common.candidates.Last(); i += new TimeSpan(1, 0, 0, 0, 0))
+            var s = Common.candidates.Min();
+            var end = Common.candidates.Max();
+            for (var i = s; i <= end; i += new TimeSpan(1, 0, 0, 0, 0))
             {
                 if (candidatesList.Contains(i)) continue;
                 calendar.BlackoutDates.Add(new CalendarDateRange(i));

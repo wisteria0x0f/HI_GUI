@@ -34,18 +34,22 @@ namespace WpfApplication1
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            for (var i = Common.candidates.First(); i <= Common.candidates.Last(); i += new TimeSpan(1, 0, 0, 0, 0))
+            
+            foreach(var i in Common.candidates)
             {
+                if(results.Any(x => x.Key == i)) continue;
                 results.Add(i, 0);
             }
 
             foreach (var d in Common.inputData)
             {
-                if (d.Count() == 0) continue;
-                for (var i = d.First(); i <= d.Last(); i += new TimeSpan(1, 0, 0, 0, 0))
+                if (d.Length == 0) {
+                    continue;
+                }
+                foreach(var day in d)
                 {
-                    if(!results.Any(x => x.Key == i)) continue;
-                    results[i]++;
+                    //if(!results.Any(x => x.Key == i)) continue;
+                    results[day]++;
                 }
             }
 

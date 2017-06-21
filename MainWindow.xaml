@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow"  Width="550" Height="400" HorizontalContentAlignment="Stretch" ResizeMode="CanMinimize">
+        Title="MainWindow"  Width="550" Height="400" HorizontalContentAlignment="Stretch" ResizeMode="CanMinimize" ShowsNavigationUI="False">
 
 </NavigationWindow>
