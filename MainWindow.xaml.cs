@@ -18,15 +18,18 @@ namespace WpfApplication1
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : NavigationWindow
     {
         public MainWindow()
         {
-            InitializeComponent();
+            //InitializeComponent();
+            this.ShowsNavigationUI = false;
+            Navigate(new Candidate());
         }
 
         public void NextButtonClicked(object sender, EventArgs e)
         {
+            Navigate(new Candidate());
 
         }
     }

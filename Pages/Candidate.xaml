@@ -15,7 +15,7 @@
                 </TransformGroup>
             </Calendar.RenderTransform>
         </Calendar>
-        <Button x:Name="buttonNext" Content="次ｯ！" Margin="400,263,10,10" FontFamily="KFhimaji" FontSize="14"/>
+        <Button x:Name="buttonNext" Content="次ｯ！" Margin="400,263,10,10" FontFamily="KFhimaji" FontSize="14" Click="buttonNext_Click"/>
 
     </Grid>
 </Page>
