@@ -24,5 +24,10 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        public void NextButtonClicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
