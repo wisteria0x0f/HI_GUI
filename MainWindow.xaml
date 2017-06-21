@@ -5,10 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" HorizontalContentAlignment="Stretch">
-    <Grid>
-        <Calendar Margin="20,20,271,110" SelectionMode="MultipleRange" FontFamily="KFhimaji" HorizontalContentAlignment="Stretch" RenderTransformOrigin="1,1" VerticalContentAlignment="Stretch" FontSize="20" HorizontalAlignment="Center"/>
-        <Button x:Name="button" Content="次ｯ！" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="432,289.04,0,0" FontFamily="KFhimaji" FontSize="14"/>
-
-    </Grid>
+        Title="Step1. 候補日を入力してください" Height="366.76" Width="598.944" HorizontalContentAlignment="Stretch" WindowStyle="ThreeDBorderWindow" ResizeMode="CanMinimize">
+    <Grid/>
 </Window>
