@@ -6,9 +6,16 @@
       xmlns:local="clr-namespace:WpfApplication1"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Result">
+      Title="Result" Width="500" Height="300">
 
-    <Grid>
-        
+    <Grid Margin="0,0,0,0" Height="300">
+        <Button x:Name="buttonFinish" Content="おしまい" Margin="400,263,10,10" FontFamily="KFhimaji" FontSize="14"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="280" Width="385" Margin="10,10,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="200"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Page>

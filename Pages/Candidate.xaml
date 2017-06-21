@@ -5,17 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApplication1"
       mc:Ignorable="d"
-      Title="Candidate" Width="493.521" Height="309.296">
+      Title="Candidate" Width="500" Height="300">
 
-    <Grid Margin="0,0,0,0">
-        <Calendar Margin="156,76,156,77" SelectionMode="MultipleRange" FontFamily="KFhimaji" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5">
+    <Grid Margin="0,0,0,0" Height="300">
+        <Calendar Margin="100,76,212,77" SelectionMode="MultipleRange" FontFamily="KFhimaji" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5">
             <Calendar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
                 </TransformGroup>
             </Calendar.RenderTransform>
         </Calendar>
-        <Button x:Name="button" Content="次ｯ！" Margin="400,279,10,10" FontFamily="KFhimaji" FontSize="14"/>
+        <Button x:Name="buttonNext" Content="次ｯ！" Margin="400,263,10,10" FontFamily="KFhimaji" FontSize="14"/>
 
     </Grid>
 </Page>
