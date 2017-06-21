@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HI_GUI.Properties
+namespace WpfApplication1.Properties
 {
 
 
