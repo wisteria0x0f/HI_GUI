@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" HorizontalContentAlignment="Stretch">
     <Grid>
-      <Frame NavigationUIVisibility="Hidden" Name="MyFrame" />
         <Calendar Margin="20,20,271,110" SelectionMode="MultipleRange" FontFamily="KFhimaji" HorizontalContentAlignment="Stretch" RenderTransformOrigin="1,1" VerticalContentAlignment="Stretch" FontSize="20" HorizontalAlignment="Center"/>
-        <Button x:Name="button" Content="次ｯ！" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="432,289.04,0,0" FontFamily="KFhimaji" FontSize="14" Click="NextButtonClicked"/>
+        <Button x:Name="button" Content="次ｯ！" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="432,289.04,0,0" FontFamily="KFhimaji" FontSize="14"/>
 
     </Grid>
 </Window>
