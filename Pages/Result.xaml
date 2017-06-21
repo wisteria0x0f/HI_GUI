@@ -9,8 +9,9 @@
       Title="Result" Width="500" Height="300"
       Loaded="Page_Loaded">
 
-    <Grid Margin="0,0,0,0" Height="300">
+    <Grid Margin="0,0,0,0" Height="300" Background="White">
         <Button x:Name="buttonFinish" Content="おしまい" Margin="400,263,10,10" FontFamily="KFhimaji" FontSize="14" Click="buttonFinish_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="280" Width="385" Margin="10,10,0,0" DataContext="{Binding}" ItemsSource="{Binding}" FontFamily="KFhimaji" FontSize="14" />
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="280" Width="276" Margin="10,10,0,0" DataContext="{Binding}" ItemsSource="{Binding}" FontFamily="KFhimaji" FontSize="14" />
+        <Label x:Name="label"  Content="候補日と、参加できる&#xa;人数の表ができました。&#xa;&#xa;日取りを決定しましょう。&#xa;&#xa;&#xa;[おしまい] をクリックで&#xa;終了します。" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="309,24,0,0" Height="234" Width="181" FontFamily="KFhimaji" FontSize="14"/>
     </Grid>
 </Page>
